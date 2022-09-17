@@ -1,0 +1,358 @@
+/*reset css*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: rgb(233, 221, 204);
+}
+
+/*estilos generales del body*/
+
+.contenedorIndex {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 7fr 1.2fr;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+/*estilos header mobile*/
+header {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: #EA6523;
+    align-items: center;
+    justify-content: space-evenly;
+    width: auto;
+    grid-area: header;
+}
+
+header h1 {
+    font-size: 0.8rem;
+    color: antiquewhite;
+}
+
+header a img {
+    height: 2rem;
+}
+
+/*estilos header pantalla completa*/
+@media (min-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: #EA6523;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    header a img {
+        height: 4rem;
+    }
+    
+    
+}
+    
+
+
+
+
+
+
+
+
+
+
+/*estilos main mobile*/
+
+
+
+
+
+
+
+.imagenIndex {
+    display: none;
+   /* position: absolute;
+    opacity: 0.3;
+    z-index:1;*/
+}
+
+.loguito {
+    width: 100%;
+}
+
+.formulario {
+    display: flex;
+    /*padding: 2rem 0rem 2rem 0rem;*/
+    flex-direction: column;
+    gap: 0.01rem;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+aside {
+    display: flex;
+    z-index: 10;
+    text-align: center;
+}
+
+
+main {
+    /*background-image: url(../CSS/img/imagen-portada-4.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;*/
+    padding: 2rem 0rem 2rem 0rem;
+    grid-area: main;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    grid-template-rows: repeat(6, 2fr);
+    grid-template-areas: 
+    "usuario usuario"
+    "contraseña contraseña"
+    "recordarme recordarme"
+    "div div"
+    "invitado invitado"
+    "recuperar recuperar";
+    width: 100%;
+    gap: 1rem;
+}
+
+.formulario input, .formulario label, .formulario div input, .formulario a input {
+    font-size: 1.5rem;
+    padding: 0.4rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    width: max-content;
+}
+
+.usuario {
+    grid-area: usuario;
+}
+
+.contraseña {
+    grid-area: contraseña;
+}
+
+.formulario label {
+    grid-area: recordarme;
+}
+
+.div {
+    grid-area: div;
+}
+
+.botonInvitado {
+    grid-area: invitado;
+}
+
+.recuperar {
+    grid-area: recuperar;
+}
+
+.formulario div input, .formulario a input {
+    letter-spacing: 0.1rem;
+    background-color: #455561;
+    color: antiquewhite;
+    box-shadow: 2px 2px 2px black;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    border-radius: 5px;
+}
+
+.formulario div input:hover, .formulario a input:hover {
+    background-color: blue;
+}
+/*estilos main pantalla completa*/
+/*
+main {
+    display: grid;
+    grid-template-columns: 1.2fr 0.7fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "div aside";
+    align-items: center;
+    height: 75vh;
+}
+
+main div {
+    grid-area: div;
+}
+
+main aside {
+    grid-area: aside;
+}
+
+.loguito {
+    width: 70%;
+    max-width: 700px;
+}*/
+
+/*
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-bottom: 6rem;
+}
+*/
+
+
+
+/*estilos footer mobile*/
+
+footer {
+    background-color: #455561;
+    display: block;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    grid-area: footer;
+}
+
+footer a img {
+    display: none;
+    width: 6rem;
+}
+
+.contactoFooter {
+    display: none;
+}
+.wpp {
+    display: inline-block;
+    position: sticky;
+    background-color: #455561;
+    width: 3.6rem;
+}
+
+
+/*estilos footer pantalla completa*/
+
+
+
+
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer ul li {
+    font-size: 1rem;
+    color: antiquewhite;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: chartreuse;
+}
+
+
+
+
+
+
+
+
+/*esilos de home*/
+
+
+
+
+/*body home*/
+
+/*main home*/
+
+
+main div h2 {
+    font-size: 1.3rem;
+    background-color: dimgrey;
+    color: aliceblue;
+}
+.lobby, .mainAccesos{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding: 1rem;
+    height: max-content;
+    gap: 1.2rem;
+}
+
+.lobby h2 {
+    padding: 1rem;
+}
+
+.lobby ul {
+    list-style: none;
+}
+
+.lobby ul li a img {
+    /*height: 200px;*/
+    width: 100%
+}
+
+.ulMain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+
+
+
+
+/*estilos reclamos*/
+/*main reclamos*/
+.mainAccesos ul li a img {
+    height: 5rem;
+}
+
+.mainAccesos ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 3rem;
+}
+
+.mainAccesos ul li {
+    width: 25rem;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color:lightslategray
+}
+
+.mainAccesos ul li a {
+    text-decoration: none;
+}
