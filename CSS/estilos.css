@@ -9,11 +9,15 @@
 body {
     font-family: 'Oswald', sans-serif;
     background-color: rgb(233, 221, 204);
+    background-image: url(../CSS/img/adsakldja.png);
+    background-position:center;
+    background-size: 25%;
+    background-repeat: repeat;
 }
 
 /*estilos generales del body*/
 
-.contenedorIndex {
+.contenedorIndex, .contenedorAccesos{
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr;
@@ -25,7 +29,7 @@ body {
 }
 
 /*estilos header mobile*/
-header {
+header, .headerAccesos{
     display: block;
     display: flex;
     flex-direction: column;
@@ -38,37 +42,13 @@ header {
 }
 
 header h1 {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: antiquewhite;
 }
 
 header a img {
     height: 2rem;
 }
-
-/*estilos header pantalla completa*/
-@media (min-width: 600px) {
-    header {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        background-color: #EA6523;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
-        width: 100%;
-    }
-    header h1 {
-        font-size: 2rem;
-    }
-    header a img {
-        height: 4rem;
-    }
-    
-    
-}
-    
-
 
 
 
@@ -88,18 +68,11 @@ header a img {
 
 .imagenIndex {
     display: none;
-   /* position: absolute;
-    opacity: 0.3;
-    z-index:1;*/
-}
-
-.loguito {
-    width: 100%;
+    width: auto;
 }
 
 .formulario {
     display: flex;
-    /*padding: 2rem 0rem 2rem 0rem;*/
     flex-direction: column;
     gap: 0.01rem;
     align-items: center;
@@ -115,11 +88,7 @@ aside {
 
 
 main {
-    /*background-image: url(../CSS/img/imagen-portada-4.png);
-    background-size:contain;
-    background-repeat: no-repeat;
-    background-position: center;*/
-    padding: 2rem 0rem 2rem 0rem;
+    padding: 1rem 0rem 1rem 0rem;
     grid-area: main;
     display: flex;
     align-items: center;
@@ -182,45 +151,8 @@ main {
 }
 
 .formulario div input:hover, .formulario a input:hover {
-    background-color: blue;
+    background-color: cornflowerblue;
 }
-/*estilos main pantalla completa*/
-/*
-main {
-    display: grid;
-    grid-template-columns: 1.2fr 0.7fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "div aside";
-    align-items: center;
-    height: 75vh;
-}
-
-main div {
-    grid-area: div;
-}
-
-main aside {
-    grid-area: aside;
-}
-
-.loguito {
-    width: 70%;
-    max-width: 700px;
-}*/
-
-/*
-.formulario {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    justify-content: center;
-    gap: 0.5rem;
-    padding-bottom: 6rem;
-}
-*/
-
-
 
 /*estilos footer mobile*/
 
@@ -229,7 +161,7 @@ footer {
     display: block;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0.5rem 1rem 0.5rem;
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
     grid-area: footer;
 }
 
@@ -276,46 +208,52 @@ footer ul li a {
 
 
 
-
-
-
-/*esilos de home*/
-
-
-
-
-/*body home*/
-
-/*main home*/
+/*estilos home*/
 
 
 main div h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     background-color: dimgrey;
     color: aliceblue;
 }
+
 .lobby, .mainAccesos{
     display: block;
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content:center;
-    padding: 1rem;
+    padding: 0rem 0.5rem 0rem 0.5rem;
     height: max-content;
     gap: 1.2rem;
 }
 
 .lobby h2 {
-    padding: 1rem;
+    padding: 0.3rem;
+    width: 100%;
+    text-align: center;
 }
 
-.lobby ul {
-    list-style: none;
+span {
+    display: flex;
+    justify-content: center;
+}
+.homeBIndex {
+    background-color:darkslategrey;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    font-weight: bold;
+    color: antiquewhite;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin-bottom: 1rem;
 }
 
-.lobby ul li a img {
-    /*height: 200px;*/
-    width: 100%
+.homeBIndex:hover {
+    background-color: cornflowerblue;
 }
+
 
 .ulMain {
     display: flex;
@@ -324,7 +262,6 @@ main div h2 {
     align-items: center;
     gap: 1.2rem;
 }
-
 
 
 
@@ -355,4 +292,76 @@ main div h2 {
 
 .mainAccesos ul li a {
     text-decoration: none;
+}
+
+.mainAccesos ul li img {
+    height: 5rem;
+}
+
+
+
+
+/*estilos pantalla completa*/
+@media (min-width: 600px) {
+    header, .headerAccesos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: #EA6523;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem;
+        width: 100%;
+    }
+    header h1 {
+        font-size: 2.5rem;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+    }
+    header a img {
+        height: 3.3rem;
+    }
+
+    .mainIndex {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+
+    .lobby {
+        padding: 0;
+    }
+
+
+    .imagenIndex {
+        display: block;
+        width: 370px
+    }
+
+    .loguito {
+        width: 100%;
+    }
+
+    footer ul li {
+        font-size: 1.5rem;
+    }
+
+
+    /*estilos para lobby*/
+
+    .imgLobby {
+        max-width: 520px;
+    }
+
+    .lobby {
+        width: 70%;
+    }
+    .cpyfrase {
+        display: block;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }
